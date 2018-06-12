@@ -6,31 +6,46 @@
 	</head>
 	<body>
 		<div id="box">
-		<input id="OnToOff" type="button" value="ON">
-		<h1 id="display"></h1>
+		<input id="onToOff" type="button" value="ON">
 			</div>
 
 		<script>
 
 
-			function BoxColor(){
-				var color = document.getElementById("box");
-				if (color.style.backgroundColor=="green"){
-					color.style.backgroundColor="red";
+			// function BoxColor(){
+				// var color = document.getElementById("box");
+				// if (color.style.backgroundColor=="green"){
+				// 	color.style.backgroundColor="red";
 
-				}
-				else{
-					color.style.backgroundColor ="green";
-				}
+				// }
+				// // else if(){
+				// // 	color.style.backgroundColor="green";
+				// // }
+			// 	else{
+			// 		color.style.backgroundColor ="green";
+			// 	}
 			
-			}
+			// }
 			
 			//document.body.style.backgroundColor = "green";
-			document.getElementById("OnToOff").addEventListener("click", changeButtonLabel);
-
 			
+			var boxColor =document.getElementById("box");
+				boxColor.addEventListener("mouseenter", function(){
+					if(text.value=="ON"){
+						boxColor.style.backgroundColor="green";
+					}
+
+				});
+				boxColor.addEventListener("mouseleave", function(){
+					if(text.value=="ON"){
+						boxColor.style.backgroundColor="red";
+					}
+				});
+
+
+			var text = document.getElementById("onToOff");
 			function changeButtonLabel(){
-				var text = document.getElementById("OnToOff");
+				
 				if (text.value=="ON"){
 					text.value="OFF";
 
@@ -40,10 +55,7 @@
 				}
 			}
 
-			document.getElementById("OnToOff").addEventListener("click", changeButtonLabel);
-
-			document.getElementById("box").addEventListener("mouseenter", BoxColor);
-			document.getElementById("box").addEventListener("mouseleave", BoxColor);
+			document.getElementById("onToOff").addEventListener("click", changeButtonLabel);
 
 
 		</script>
