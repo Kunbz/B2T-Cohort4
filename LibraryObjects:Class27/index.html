@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="display"></ul>
+
+	<script>
+		var library = [
+			{ author: "Bill Gates", title: "The Road Ahead", readingStatus: true },
+			{ author: "Steve Jobs", title : "Walter Isaacson", readingStatus: true},
+			{author: "Suzanne Collins", title: "Mockingjay: The Final Book of The Hunger Games" , readingStatus : false}
+		];
+			function displayResult(){  	
+				for(var i=0; i<library.length; i++){
+					if(library[i].readingStatus==true){
+					document.getElementById("display").innerHTML += "<li>" + "Already read " + library[i].title + " by " + library[i].author + "</li>" +"<br>"
+
+					}
+					else{
+						document.getElementById("display").innerHTML +="<li>" + "You still need to read " + library[i].title + " by " + library[i].author + "</li>" + "<br>"
+					}
+				
+				}
+			
+			}
+
+			displayResult();
+	</script>
+</body>
+</html>
+  
+
+
+<!-- 
+  fruits = ['apple', 'grape', 'orange']
+             0.        1        2
+             i= index
+    i = 0     fruits[i]= apple
+    i = 1     fruits[i]= grapes 
+
+ -->
+
+
+<!-- 
+//Consider the following array
+
+var library = [
+
+  { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true },
+
+  { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true },
+
+  { author: 'Suzanne Collins', title:  'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }
+
+];
+
+If the reading status is true display “Already read '<insert title>' by <insert author>.”
+
+If the reading status is false display “You still need to read '<insert title>' by <insert author>.”
+
+Display results on webpage -->
